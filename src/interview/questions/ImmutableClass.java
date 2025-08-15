@@ -10,12 +10,15 @@ public final class ImmutableClass {
 
 	public ImmutableClass(String str, ArrayList<Integer> list) {
 		this.str = str;
+		
+		//performing deep copy for immutability of arrayList
 		ArrayList<Integer> immutableList=new ArrayList<Integer>();
 		for(Integer i:list) {
 			immutableList.add(i);
 		}
 		this.al = immutableList;
 		//this.al=list;
+		/*Uncomment above line to check what happens without deep copy*/
 	}
 
 	public String getStr() {
