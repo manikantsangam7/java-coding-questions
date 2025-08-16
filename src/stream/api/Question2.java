@@ -21,7 +21,7 @@ public class Question2 {
 		
 		//print first element of the list
 		System.out.println("First element of the list:");
-		list.stream().findFirst().ifPresent(System.out::println);
+		list.stream().findFirst().ifPresentOrElse(System.out::println, null);
 		
 		//total no. of elements present in the list
 		long count=list.stream().count();
